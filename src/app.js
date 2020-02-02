@@ -63,11 +63,11 @@ app.get('/weather', (req, res) => {
 					error: error
 				});
 			}
-		res.send({
-			search: text,
-			location: location,
-			forecast: forecastData
-		});
+			res.send({
+				search: text,
+				location: location,
+				forecast: forecastData
+			});
 	});
 });
 });

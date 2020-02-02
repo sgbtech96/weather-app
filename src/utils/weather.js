@@ -8,7 +8,7 @@ const weather = (latitude, longitude, callback) => {
 		} else {
 			const rainProb = body.currently.precipProbability;
 			const temp = body.currently.temperature;
-			callback(undefined, body.daily.data[0].summary + ' It is currently ' + temp + ' degrees and chance of rain is ' + rainProb + ' %');
+			callback(undefined, body.daily.data[0].summary + ' It is currently ' + temp + ' degrees. Chance of rain is ' + rainProb + '%. Highest temperature recorded today is ' + body.daily.data[0].temperatureHigh + ' degrees, and the lowest temperature recorded is ' + body.daily.data[0].temperatureLow + ' degrees.');
 		}
 	});
 };
